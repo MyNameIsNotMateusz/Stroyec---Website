@@ -28,6 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 93vh;
+    overflow: auto;
 }
 
 .glass-container{
@@ -86,6 +87,8 @@ li.nav-link a:hover {
 }
 
 .content-offers {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #fff;
     height: 38vh;
     width: 28vh;
@@ -143,7 +146,13 @@ button:hover {
     background-color: #2668db;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1846px) {
+    .content-offers {
+        height: 41vh;
+    }
+}
+
+@media screen and (max-width: 1645px) {
     .container {
         height: auto;
     }
@@ -178,6 +187,18 @@ button:hover {
         max-width: 100px;
     }
 
+    .content-offers {
+        width: 38vh;
+        padding: 1px 10px;
+    }
+
+}
+
+@media screen and (max-width: 1020px) {
+    .content-offers {
+        width: 28vh;
+        padding: 1px 3px;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -194,6 +215,16 @@ button:hover {
 
     .logo {
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .glass-container {
+        width: 70%;
+    }
+
+    .content-offers {
+        width: 30vh;
     }
 }
  

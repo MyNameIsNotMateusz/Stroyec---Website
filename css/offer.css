@@ -75,7 +75,7 @@ li.nav-link a {
 li.nav-link a:hover {
     text-decoration: none;
     color: #629cff;
-    transform: scale(1.20);
+    transform: scale(1.10);
     transition: color 0.3s ease;
 }
 

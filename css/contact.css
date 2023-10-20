@@ -77,20 +77,22 @@ li.nav-link a {
 li.nav-link a:hover {
     text-decoration: none;
     color: #629cff;
-    transform: scale(1.20);
+    transform: scale(1.10);
     transition: color 0.3s ease;
 }
 
 
 .content {
+    margin-top: 15px;
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
+
 .main {
+    margin-top: 14px;
     position: relative;
-    margin-top: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -112,8 +114,8 @@ li.nav-link a:hover {
 .form-sub-label-container {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin: 3vh auto;
+    width: 90%;
+    margin: 1.5vh auto;
     height: auto;
 }
 
@@ -135,7 +137,7 @@ input:focus {
 .form-container {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     margin: 0.3vh auto;
     height: auto;
 }
@@ -150,7 +152,7 @@ input:focus {
 }
 
 .form-button {
-    width: 80%;
+    width: 90%;
     margin-top: 2vh;
     height: 3.5vh;
     color: #fff;
@@ -185,13 +187,14 @@ input:focus {
 
 
 @media screen and (max-width: 1635px) {
+
     .container {
         height: auto;
     }
 
     .glass-container{
-        height: auto;
         margin-top: 20px;
+        height: auto;
     }
 
     .navbar {
@@ -203,6 +206,7 @@ input:focus {
     .content {
         display: flex;
         flex-direction: column;
+        align-items: center;         
     }
 
     .main {
@@ -315,15 +319,10 @@ input:focus {
 }
 
 .succes {
-    width: 10vw;
-    height: 10vh;
-    background-image: url('../images/done.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: none; 
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: bold;
     position: absolute; 
-
-    left: 100%; 
+    left: 10vh;
     opacity: 0; 
 }

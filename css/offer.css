@@ -87,14 +87,15 @@ li.nav-link a:hover {
 
 .content-offers {
     border: 1px solid #fff;
-    height: 48vh;
+    height: 38vh;
     width: 28vh;
-    margin-top: 8vh;
+    margin-top: 12vh;
     color: #fff;
     background-color: transparent;
     border-radius: 10px;
     cursor: pointer;
-    transform: all 0.3s ease;
+    transition: all 0.4s ease;
+    padding: 1px 3px;
 }
 
 .content-offers:hover {
@@ -112,7 +113,8 @@ li.nav-link a:hover {
 .content-offers p {
     text-align: center;
     font-size: 14px;
-    line-height: 22px;
+    letter-spacing: 0.2px;
+    line-height: 19px;
     margin: 5px 2px;
 }
 

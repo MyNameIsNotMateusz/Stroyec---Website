@@ -180,7 +180,7 @@ button:hover {
         display: flex;
         justify-content: space-between; 
         align-items: center;            
-    
+    }
     .image-wrapper img {
         max-width: 300px;
     }
@@ -213,6 +213,11 @@ button:hover {
 @media screen and (max-width: 609px) {
     .glass-container {
         width: 100%;
+    }
+
+    .image-wrapper img {
+        max-width: 100px;
+        align-items: end;
     }
 
     .logo {

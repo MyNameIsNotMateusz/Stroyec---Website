@@ -85,15 +85,21 @@ li.nav-link {
 }
 
 .content {
-    margin-top: 15px;
+    margin-top: 85px;
     display: flex;
+    align-items: start;
     width: 100%;
+    height: 100vh;
 }
 
 .main {
-    margin-top: 10vh;
+    margin-top: 10px;
     display: inline-block;
-    padding: 20px;
+    padding-right: 50px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 38.4vh;
 }
 
 .main h2 {
@@ -125,7 +131,6 @@ button:hover {
 
 .image-wrapper {
     display: flex;
-    margin-top: 5vh;
     position: relative;
     transform: translateX(100%);
     animation: slideFromRight 1s 0.9s forwards;

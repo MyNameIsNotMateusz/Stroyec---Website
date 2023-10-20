@@ -99,6 +99,7 @@ li.nav-link a:hover {
     cursor: pointer;
     transition: all 0.4s ease;
     padding: 1px 3px;
+    overflow: auto;
 }
 
 .content-offers:hover {

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroyec | IT contact</title>
+    <link href="css/contact.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="glass-container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">Stroyec - we make IT happen</a>
+                </div>
+                <ul class="nav-links">
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="offer.html">Offer</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="main">
+                    <div  id="mainContent">
+                        <h1 >Contact Us</h1>
+                        <div class="subHeader">We will contact you as soon as possible!</div>
+                        <div class="form-sub-label-container">
+                            <input spellcheck="false" id="input_1" placeholder="✉ Email">
+                            <label for="input_1" class="form-sub-label">example@gmail.com</label>
+                        </div>
+                        <div class="form-container">
+                            <textarea spellcheck="false" class="form-textarea" id="input_2"></textarea>
+                            <label for="input_2" class="form-container-label">Briefly explain your query.</label>
+                        </div>
+                        <button class="form-button" type="button" onclick="hideMainContent()">Wyślij</button>
+                    </div>
+                    <png class="succes"></png>
+                </div>
+                <script>
+                    function hideMainContent() {
+    console.log("Button was clicked!");
+    var mainDivContent = document.getElementById('mainContent');
+    var successImage = document.querySelector('.succes');
+    
+    if (mainDivContent && successImage) {
+        mainDivContent.style.opacity = '0';
+        setTimeout(() => {  
+            mainDivContent.style.display = 'none';
+            successImage.style.display = 'block';
+            setTimeout(() => {  
+                successImage.style.opacity = '1'; 
+            }, 50);
+        }, 300); 
+    }
+}
+
+                </script>
+                <div class="test">
+                    <p class="topic">Dane Firmy</p>
+                    <p>Nazwa: STROYEC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ</p>
+                    <p>NIP: 5761579039</p>
+                    <p>KRS: 0000612492</p>
+                
+                    <p class="topic">Kontakt</p>
+                    <p>Stroyec sp. ZOO</p>
+                    <p>Adres: ul. Kobierzycka 22 52-315 Wroclaw </p>
+                    <p>Mail: office@stroyec.pl</p>
+                    <aside>
+                        <iframe class="custom-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.86193132118!2d16.984865376987266!3d51.055637143605004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc3c197b4d589%3A0xe472bcb81cef812d!2sKobierzycka%2022%2C%2052-315%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1697702316245!5m2!1spl!2spl">
+                    </aside>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

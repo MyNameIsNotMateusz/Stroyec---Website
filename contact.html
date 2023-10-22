@@ -12,51 +12,78 @@
 <body>
     <div class="container">
         <div class="glass-container">
-            <nav class="navbar">
+            <nav class="navbar clearfix">
                 <div class="logo">
                     <a href="index.html">Stroyec - we make IT happen</a>
                 </div>
                 <ul class="nav-links">
-                    <li class="nav-link"><a href="index.html">Home</a></li>
-                    <li class="nav-link"><a href="offer.html">Offer</a></li>
+                    <li class="nav-link"><a href="index.html">Strona główna</a></li>
+                    <li class="nav-link"><a href="offer.html">Oferta</a></li>
                 </ul>
             </nav>
             <div class="content">
                 <div class="main">
-                    <div  id="mainContent">
-                        <h1 >Contact Us</h1>
-                        <div class="subHeader">We will contact you as soon as possible!</div>
-                        <div class="form-sub-label-container">
-                            <input spellcheck="false" id="input_1" placeholder="✉ Email">
-                            <label for="input_1" class="form-sub-label">example@gmail.com</label>
-                        </div>
-                        <div class="form-container">
-                            <textarea spellcheck="false" class="form-textarea" id="input_2"></textarea>
-                            <label for="input_2" class="form-container-label">Briefly explain your query.</label>
-                        </div>
-                        <button class="form-button" type="button" onclick="hideMainContent()">Wyślij</button>
+                    <div id="mainContent">
+                        <h1>Skontaktuj się</h1>
+                        <div class="subHeader">Zadaj nam pytanie, a my skontaktujemy się z Tobą wkrótce!</div>
+                        <form action="sendmail.php" method="post" id="contactForm">
+                            <div class="form-sub-label-container">
+                                <input spellcheck="false" id="input_1" name="email" placeholder="✉ Email" required>
+                                <label for="input_1" class="form-sub-label">example@gmail.com</label>
+                            </div>
+                            <div class="form-container">
+                                <textarea spellcheck="false" class="form-textarea" id="input_2" name="message"
+                                    required></textarea>
+                                <label for="input_2" class="form-container-label">Opisz krótko swoje zapytanie.</label>
+                            </div>
+                            <button class="form-button" type="submit">Wyślij</button>
+                        </form>
                     </div>
                     <div class="succes">
                         Success!👍
                     </div>
                 </div>
                 <script>
+                    document.getElementById('contactForm').addEventListener('submit', function (event) {
+                        event.preventDefault();
+
+                        var formData = new FormData(this);
+
+                        fetch('sendmail.php', {
+                            method: 'POST',
+                            body: formData
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    return response.text();
+                                }
+                                throw new Error('Network response was not ok.');
+                            })
+                            .then(data => {
+                                console.log(data);  // tutaj możesz wyświetlić odpowiedź z serwera, jeśli potrzebujesz
+                                hideMainContent();
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                            });
+                    });
+
                     function hideMainContent() {
-    console.log("Button was clicked!");
-    var mainDivContent = document.getElementById('mainContent');
-    var successImage = document.querySelector('.succes');
-    
-    if (mainDivContent && successImage) {
-        mainDivContent.style.opacity = '0';
-        setTimeout(() => {  
-            mainDivContent.style.display = 'none';
-            successImage.style.display = 'block';
-            setTimeout(() => {  
-                successImage.style.opacity = '1'; 
-            }, 50);
-        }, 300); 
-    }
-}
+                        console.log("Form was submitted!");
+                        var mainDivContent = document.getElementById('mainContent');
+                        var successImage = document.querySelector('.succes');
+
+                        if (mainDivContent && successImage) {
+                            mainDivContent.style.opacity = '0';
+                            setTimeout(() => {
+                                mainDivContent.style.display = 'none';
+                                successImage.style.display = 'block';
+                                setTimeout(() => {
+                                    successImage.style.opacity = '1';
+                                }, 50);
+                            }, 300);
+                        }
+                    }
 
                 </script>
                 <div class="test">
@@ -64,20 +91,19 @@
                     <p>Nazwa: STROYEC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ</p>
                     <p>NIP: 5761579039</p>
                     <p>KRS: 0000612492</p>
-                
+
                     <p class="topic">Kontakt</p>
                     <p>Stroyec sp. ZOO</p>
                     <p>Adres: ul. Kobierzycka 22 52-315 Wroclaw </p>
-                    <p>Mail: office@stroyec.pl</p>
+                    <p>Mail: officeit@stroyec.pl</p>
                     <aside>
-                        <iframe class="custom-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.86193132118!2d16.984865376987266!3d51.055637143605004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc3c197b4d589%3A0xe472bcb81cef812d!2sKobierzycka%2022%2C%2052-315%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1697702316245!5m2!1spl!2spl">
+                        <iframe class="custom-iframe"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.86193132118!2d16.984865376987266!3d51.055637143605004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc3c197b4d589%3A0xe472bcb81cef812d!2sKobierzycka%2022%2C%2052-315%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1697702316245!5m2!1spl!2spl">
                     </aside>
                 </div>
-                
             </div>
         </div>
     </div>
-    
 </body>
 
 </html>

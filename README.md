@@ -5,8 +5,7 @@
 <h1>Responsive Website</h1>
 <p>Website for Stroyec company.</p>
 
-<h4> <a href=https://mynameisnotmateusz.github.io/Stroyec---Website/>View Demo</a> <span> · </span> <a href="https://github.com/Mateusz Otorowski/Stroyec Website/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/Mateusz Otorowski/Stroyec Website/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/Mateusz Otorowski/Stroyec Website/issues"> Request Feature </a> </h4>
-
+<h4> <a href=https://mynameisnotmateusz.github.io/Stroyec---Website/>View Demo</a> <span>
 
 </div>
 

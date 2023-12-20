@@ -1,6 +1,6 @@
 <div align='center'>
 
-<img src=https://raw.githubusercontent.com/MyNameIsNotMateusz/Stroyec---Website/main/images/preview.JPG alt="logo" width=250 height=150 />
+<img src=https://raw.githubusercontent.com/MyNameIsNotMateusz/Stroyec---Website/main/images/preview.JPG alt="logo" width=280 height=150 />
 
 <h1>Responsive Website</h1>
 <p>Website for Stroyec company.</p>
